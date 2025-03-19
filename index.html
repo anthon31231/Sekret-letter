@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sekret Letter</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #fdf6e3;
+            padding: 50px;
+            color: #ffffff;
+            background-image: url('https://source.unsplash.com/1600x900/?night,stars');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            color: #ffd700;
+            font-size: 36px;
+            text-shadow: 2px 2px #ffcc00;
+        }
+        .heart-button {
+            font-size: 50px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ff0000;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        #letter {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255, 182, 193, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px dashed #ffd700;
+        }
+        p {
+            font-size: 18px;
+            color: #000000;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .yes-button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #90ee90;
+            border: none;
+            color: black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .no-button {
+            font-size: 24px;
+            padding: 15px 40px;
+            background-color: #ff4500;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌟 Happy Birthday! 🎂</h1>
+    <p>U definitely should not press the heart.</p>
+    <button class="heart-button" onclick="showLetter()">❤️</button>
+    <div id="letter">
+        <h2>Happy Birthday Chin! </h2>
+        <p>Happy birthday chin, please no matter how hard or painful of what you are going through please keep on living not just for yourself but others too no matter what others say, there will and there will be someone who likes and appreciates you more than you think.</p>
+        <p>You're not too much, you're not too emotional, you're not too sensitive you're just real, you are you. You feel things deeply, and thats not a flaw, its a gift, Don't ever apologize for how you feel. people who are worth your time will appreciate how much you care. give yourself time to heal, in your own way. well thats all parang bible tuloy sorry.</p>
+        <p>Anyway you know I just noticed I never asked formally, I just kept removing it at my mind. (sabihen mo ren pala kung ano sagot mo sa aken di ko alam pano iconect sa aken yung sagot mo eh.) Happy birthday</p>
+        <p> Will be my partner for prom? </p>
+        <div class="button-container">
+            <button class="yes-button" onclick="showResponse('yes')">Yes</button>
+            <button class="no-button" onclick="showResponse('no')">No</button>
+        </div>
+        <p id="response-message"></p>
+    </div>
+    <script>
+        function showLetter() {
+            document.getElementById('letter').style.display = 'block';
+        }
+        function showResponse(answer) {
+            let message = document.getElementById('response-message');
+            if (answer === 'yes') {
+                message.innerHTML = "U need to consider this is 'Anthony' we are talking about.";
+            } else {
+                message.innerHTML = "Well atleast i asked, Better than nothing.";
+            }
+        }
+    </script>
+</body>
+</html>
